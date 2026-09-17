@@ -21,7 +21,7 @@ def init_db():
     connection.close()
 
 
-
+init_db()
 
 
 @app.route("/")
@@ -141,5 +141,4 @@ def delete_task(task_id):
     return {"message": "Task deleted successfully"}, 200
 
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True, port=5001)
